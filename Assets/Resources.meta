@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: effb1fd9b7491dc4487ac16eb96809c9
+=======
+guid: cb6b2339b71b14e4895ca3e31d86ad18
+>>>>>>> 0456254 (kbhggvnb)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
