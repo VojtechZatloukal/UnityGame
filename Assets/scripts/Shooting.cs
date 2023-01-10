@@ -1,36 +1,31 @@
+﻿using Assets.scripts;
+using Pathfinding;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Assets.scripts;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+namespace Assets
 {
-
-    public Transform firePoint;
-    public GameObject bulletPrefab;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class Shooting : VersionedMonoBehaviour
     {
-      
-    }
+        public Transform firePoint;
+        public GameObject bulletPrefab;
+        public bool canFire = true;
+        public float timer;
+        public float timeBetweenBullets;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButton(0))
+
+        public void CreateBulletAndShootIt(Transform FirePoint, GameObject bulletObject)
         {
-            
-            Shoot();
-        }
-    }
-    private void Shoot()
-    {
-        Console.WriteLine("Shooting");
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-       Rigidbody2D rb =  bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * Constants.bulletSpeed, ForceMode2D.Impulse);
-    }
 
+
+            GameObject bullet = Instantiate(bulletObject, FirePoint.position, FirePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(FirePoint.up * Constants.bulletSpeed, ForceMode2D.Impulse);
+        }
+        
+    }
 }
