@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RigidBody: {fileID: 2071119315339174868}
-  Cam: {fileID: 0}
+  Cam: {fileID: 3329478789887563528, guid: c6b59876f46537c4cbc06c4b60ed902c, type: 3}
+  effect: {fileID: 1440263179994043986, guid: 914910f6ba8bfda43a5f3dbb031d8d6e, type: 3}
 --- !u!114 &2071119315339174875
 MonoBehaviour:
   m_ObjectHideFlags: 0

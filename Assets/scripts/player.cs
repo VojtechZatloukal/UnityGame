@@ -3,6 +3,7 @@ using Assets.scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour, IHittable
 {
@@ -49,8 +50,23 @@ public class player : MonoBehaviour, IHittable
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "end")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+        
+    
+    
+}
+
+    public GameObject effect;
     public void GotShot()
     {
-    alive = false;
+        Instantiate(effect, transform.position, Quaternion.identity);
+        
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+        
     }
 }

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5720063472690872750}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 10, z: 10}
+  m_LocalScale: {x: 3, y: 15, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,4 +158,4 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4278193663
-  m_Size: 0.11
+  m_Size: 0.5

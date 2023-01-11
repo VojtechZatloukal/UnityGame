@@ -32,6 +32,10 @@ namespace Assets.scripts
                 
 
             }
+            if (collision.gameObject.tag == "Wall")
+            {
+                SoundsManager.PlaySound("hit");
+            }
             Destroy(this.gameObject);
         }
         //private void OnTriggerEnter2D(Collider collision)

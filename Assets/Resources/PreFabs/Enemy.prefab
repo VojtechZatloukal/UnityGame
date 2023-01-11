@@ -37,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 1530972183332851916}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6893541082068845069
 MonoBehaviour:
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
-  rotationSpeed: 100
-  visionDistance: 100
   firePoint: {fileID: 1530972183332851916}
+  fire: {fileID: 8300000, guid: 704828add1e2a18488b3944949098b40, type: 3}
+  audioSrc: {fileID: 7567712529432064624, guid: e288025337ab72747a5d0cbc35f4cd4f, type: 3}
   bulletPrefab: {fileID: 5720063472690872750, guid: e46aa81010ad8fb4dbfcc928a8791a48, type: 3}
   canFire: 1
   timeBetweenBullets: 1

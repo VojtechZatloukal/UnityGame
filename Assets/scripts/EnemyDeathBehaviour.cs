@@ -14,6 +14,7 @@ namespace Assets.scripts
         public void GotShot()
         {
             Instantiate(effect, transform.position, Quaternion.identity);
+            SoundsManager.PlaySound("deadSound");
             Destroy(this.gameObject);
         }
 

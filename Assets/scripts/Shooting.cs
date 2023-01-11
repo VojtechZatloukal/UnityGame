@@ -24,7 +24,9 @@ namespace Assets
 
             GameObject bullet = Instantiate(bulletObject, FirePoint.position, FirePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            
             rb.AddForce(FirePoint.up * Constants.bulletSpeed, ForceMode2D.Impulse);
+            SoundsManager.PlaySound("fireP");
         }
         
     }

@@ -26,7 +26,8 @@ namespace Pathfinding
         public Transform firePoint;
         private bool folowP = false;
         IAstarAI ai;
-      
+        public  AudioClip fire;
+        public AudioSource audioSrc;
 
         public GameObject bulletPrefab;
         public bool canFire = true;
@@ -41,6 +42,7 @@ namespace Pathfinding
         {
             var bullet = Instantiate(bulletObject, FirePoint.position, rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            audioSrc.PlayOneShot(fire);
             rb.AddForce(way * 15f, ForceMode2D.Impulse);
         }
 
@@ -77,7 +79,7 @@ namespace Pathfinding
 
                     var a = Vector3.Angle(smtin, emitFrontVector);
 
-                    if (a < 30 && a > -30)
+                    if (a < 60 && a > -60)
                     {
                         //Debug.DrawLine(firePoint.position, target.position, Color.red);
                         folowP = true;
